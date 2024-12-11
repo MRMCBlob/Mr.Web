@@ -1,6 +1,6 @@
 function createBackgroundGrid() {
     const grid = document.querySelector('.background-grid');
-    const numIcons = 64; // 8x8 grid
+    const numIcons =128; // 8x8 grid
 
     for (let i = 0; i < numIcons; i++) {
         const icon = document.createElement('i');

@@ -106,6 +106,22 @@ body {
     z-index: 1;
 }
 
+.secondary {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 1rem;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    transform: scale(0.75); 
+    transform-origin: center; 
+    opacity: 0.85; 
+}
+
+
 .hero-icon {
     display: flex;
     align-items: center;
@@ -128,6 +144,35 @@ body {
     max-width: 36rem;
     margin: 0 auto 3rem;
 }
+
+.second-description {
+    font-size: 2.5rem;
+    color: #c4ccda;
+    max-width: 100rem;
+    margin: 0 auto 4rem;
+    display: inline-block; /* Ensure the text is treated as an inline block for proper animation */
+    text-shadow: 0 0 5px #c4ccda, 0 0 10px #c4ccda, 0 0 20px #8ab4f8; /* Default subtle glow */
+    animation: lightUp 3s linear infinite; /* Apply the animation */
+}
+
+@keyframes lightUp {
+    0% {
+        text-shadow: 0 0 5px #000000, 0 0 10px #c4ccda, 0 0 20px #8ab4f8;
+    }
+    50% {
+        text-shadow: 0 0 20px #85aeef9d, 0 0 30px #8ab4f8, 0 0 40px #5a91f2, 0 0 50px #5a91f2;
+    }
+    100% {
+        text-shadow: 0 0 5px #c4ccdab5, 0 0 10px #c4ccda, 0 0 20px #8ab4f8;
+    }
+}
+
+.second-description:hover {
+    text-shadow: none; /* Disable the glow on hover */
+    color: #c4ccda; /* Maintain text color without glow */
+    animation: none; /* Stop the animation */
+}
+
 
 .buttons {
     display: flex;
@@ -182,4 +227,14 @@ body {
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(4, 1fr);
     }
+}
+
+.discord-link {
+    text-decoration: underline; /* Underline the link */
+    color: #0066cc; /* Optional: Change the color to match your design */
+}
+
+.discord-link:hover {
+    color: #004a99; /* Optional: Change the color on hover */
+    text-decoration: underline; /* Ensure underline is maintained on hover */
 }
